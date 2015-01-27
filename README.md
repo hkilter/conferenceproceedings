@@ -43,6 +43,12 @@ Current work adopted from the LaTeX template found the "confproc" package descri
 
 * The list of the papers(title, authors, index) must be done manually (can me done in future by python script).
 * [SOLVED] Main pdf file has links to the embedded papers, after click to the paper always moves to it.
-	- [SOLUTION] "confproc" depends on the "pdfpages" package. Parameter called "linktodoc" inside "pdfpages" is responsible for putting links to the external pdf files. One of the options to disable it's such ability is to change "pdfpages.sty" file inside the <path-to-miktex>'Miktex\tex\latex\pdfpages\' folder on the 1448 line with text below.
-			- Original text: "\define@key{pdfpages}{linktodoc}[true]{\setboolean{AM@linktodoc}{#1}}"
-			- Changed  text: "\define@key{pdfpages}{linktodoc}[false]{\setboolean{AM@linktodoc}{#1}}".
+	- [SOLUTION] **"confproc"** depends on the **"pdfpages"** package.Parameter called "linktodoc" inside "pdfpages" is responsible for putting links to the external pdf files. One of the options to disable it's such ability is to change "pdfpages.sty" file inside the **"&lt;path-to-miktex&gt;\'Miktex\tex\latex\pdfpages\'"** folder on the 1448 line with text below.
+        + Original text
+        ```latex
+        \define@key{pdfpages}{linktodoc}[true]{\setboolean{AM@linktodoc}{#1}}
+        ```
+        + New text
+        ```
+        \define@key{pdfpages}{linktodoc}[false]{\setboolean{AM@linktodoc}{#1}}
+        ```
