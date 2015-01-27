@@ -1,0 +1,115 @@
+%%
+%% This is file `example1empty.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% confproc.dtx  (with options: `example1empty')
+%% 
+%% This is `example1empty.tex', an example file for the confproc package.
+%% Copyright (c) 2010 by Vincent Verfaille <verf[...].confproc@gmail.com>
+%% 
+%% This file is part of the confproc package.
+%% -------------------------------------------
+%% 
+%% It may be distributed and/or modified under the conditions of the
+%% LaTeX Project Public License, either version 1.2 of this license or
+%% (at your option) any later version.
+%% 
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX version
+%% 1999/12/01 or later.
+%% 
+%% This file may not be distributed without the original source file
+%% `confproc.dtx'.
+%% 
+%% The list of all files belonging to the confproc package is given in
+%% the `readme.txt' file.
+%% 
+%% For more details, LaTeX the source `confproc.dtx'.
+%% 
+\documentclass[a4paper,11pt,twoside,%
+  electronic,% [printed] | electronic
+  papers=countpages,% empty | draft | [final] | countpages
+  headers=exceptpdf,% none | pdfonly | exceptpdf | [allpages]
+  %paperselec=all, %[all] |  | p_fake
+	onecoltoc,
+	%tocnum=right,
+	twocolindex,
+	%movepagenumber=true,%
+hyperref={bookmarksdepth=1,bookmarksopen,bookmarksopenlevel=0,%
+ linkcolor=black,urlcolor=blue}, % [blue, blue, blue]
+  geometry={text={175truemm,226truemm},% A4 & letter
+    inner=0.69in,top=33.9mm,bottom=38mm,footskip=10.4mm,voffset=-4.8mm},%A4	
+]{confproc}
+  
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[super]{nth}
+
+\renewcommand{\procpdfauthor}{{World-Wide Known University}}
+\renewcommand{\procpdftitle}{{The 17th International Conference on Big Data and IT}}
+\renewcommand{\procpdfsubject}{{ICBDIT-2014, 20-21 February 2014, YourCity, YourCountry}}
+
+\renewcommand{\procchead}{} %
+\renewcommand{\proclhead}{{\em \small \procpdfsubject}}
+
+\author{\procpdfauthor}
+\title{\procpdftitle}
+% \date{\today}
+\renewcommand{\PAPERPATH}{papers/}
+\makeindex
+
+%%%===========  PROCEEDINGS  ===========
+\begin{document}
+\frontmatter
+\setcounter{page}{1}
+\pdfbookmark[0]{Preamble}{preamble}
+\pdfbookmark[1]{Cover}{cover}
+\maketitle
+\newpage
+
+\otherpagestyle
+\tableofcontents
+
+%%%==== BEGINNING OF CONFERENCES'S PAPERS ====
+\mainmatter
+	
+\procday{Research Session}
+
+	\session{New challenges in Information Technology}
+	
+		\procpaper[switch=11,%
+		  title={An Investigation of IPv4},%
+		  author={Johh Johhov},%
+		  index={\index{Johnov, Johh}},%
+		]{conference_submission_11}
+			
+		\procpaper[switch=27,%
+		  title={RoedWain: Evaluation of the Transistor},%
+		  author={Ken Deuchman, John Englishman and Safman Englishman},%
+		  index={\index{Deuchman, Ken} \index{Englishman, John} \index{Englishman, Safman}},%
+		]{conference_submission_27}
+		
+	\session{Innovations in Information Systems Engineering}
+	
+		\procpaper[switch=43,%
+		  title={Contrasting Spreadsheets and Systems},%
+		  author={Ivan Musterman, Paul Randomman and Amir Mahmoudman},%
+		  index={\index{Musterman, Ivan}
+				\index{Randomman, Paul}
+				\index{Mahmoudman, Amir}},%
+		]{conference_submission_43}
+		
+	\session{New trends in Automation and Robotics}
+  
+	
+\procday{Student Session}
+
+
+%%%==== END OF PAPERS ====
+\backmatter
+\insertindex
+\end{document}
